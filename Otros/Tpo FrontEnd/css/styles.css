@@ -1,0 +1,170 @@
+* {
+box-sizing: border-box;
+}
+
+body{
+    background: #181818;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+small {
+    display: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.contactCompleto {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .contactCompleto{
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.contactCompleto > * {
+    padding: 1rem;
+}
+
+.contactForm {
+    background: #222222;
+}
+
+.contactForm form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contactForm form div {
+    grid-column: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .contactForm form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contactForm div:nth-child(odd) {
+        grid-column: 1 / 2;
+    }
+    
+    .contactForm div:nth-child(even) {
+        grid-column: 2 / 3;
+    }
+}
+
+.contactForm form .full_width {
+    grid-column: 1 / 3;
+}
+
+.contactForm form div{
+    margin: 0;
+    padding: 1rem;
+
+}
+
+.contactForm form button,
+.contactForm form input,
+.contactForm form textarea {
+    width: 100%;
+    padding: .7rem .7rem .7rem 0;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #4a3cc9;
+    outline: 0;
+    color: #fff;
+    line-height: 24px;
+}
+
+.contactForm form button {
+    background: #4a3cc9;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.contactForm form button:hover, 
+.contactForm form button:focus{
+    background: #3a2fa3;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.contactInfo{
+    background: #000;
+}
+
+.contactInfo h4,
+.contactInfo ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contactInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactInfo ul li {
+    padding: .3rem;
+
+}
+
+.contactInfo a {
+color: inherit;
+text-decoration: none;
+}
+
+.contactInfo i {
+    padding-right: .6rem;
+}
+
+/* Pantallas grandes */
+
+ @media (min-width: 768px) {
+    body{
+        padding: 0 4rem;
+    }
+
+    .contactCompleto > * {
+        padding: 2rem;
+    }
+
+    .contactInfo h4,
+    .contactInfo ul,
+    .contactInfo div{
+      padding: .7rem;
+      text-align: left;
+    } 
+} 

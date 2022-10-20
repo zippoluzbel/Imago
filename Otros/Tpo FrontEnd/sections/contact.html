@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/5bd123e6ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+
+    
+    <div class="contenedor animate__animated animate__bounce">
+        <h1 class="logo">Contactanos</h1>
+        <div class="contactCompleto">
+            <div class="contactForm">
+                <h3>Informacion Personal</h3>
+                <form action="#" id="formulario">
+                    <div>
+                        <label for="name">Nombre Completo: </label>
+                        <input type="text" id="name" name="nombre" placeholder="Ingrese su nombre completo">
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su email">
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="telefono">Telefono: </label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su telefono">
+                        <div class="error"></div>
+                    </div>
+                    <div>
+                        <label for="subirArchivo">Adjuntar Archivo</label>
+                        <input type="file" id="subirArchivo" name="subirArchivo">
+                        <div class="error"></div>
+                    </div>
+                    <div class="full_width">
+                        <label for="">Comentario</label>
+                        <textarea name="comentario" id="comentario" rows="3" placeholder="Ingrese aca su comentario..."></textarea>
+                        <div class="error"></div>
+                    </div>
+                    <div class="full_width">
+                        <button class="g-recaptcha" data-sitekey="6Lezzo8iAAAAAKj-pArbd17oqIbdCLrGma2KHMGt" data-callback="onSubmit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contactInfo">
+                <h4>Nosotros</h4>
+                <ul>
+                    <li><a href="https://goo.gl/maps/rYnppc8oVUVrBCir6" target="_blank"><i class="fa-solid fa-location-dot"></i>Av. Alicia Moreau de Justo 740 - CABA</a></li>                    
+                    <li><a href="tel:+541165554888"><i class="fa-solid fa-phone"></i>11 6555 4888</a></li>
+                    <li><a href="mailto:mail@mail.com"><i class="fa-solid fa-envelope-open-text"></i>info@imago.com</a></li>
+                </ul>
+                <p>Obtenga imágenes únicas y altamente personalizadas con solo describirlo. Entrenada por millones de imágenes en la web y guiada por artistas y diseñadores gráficos profesionales, nuestra IA puede crear cualquier cosa que puedas imaginar, todo desde cero cada vez.</p>
+                <p>IMAGO</p>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>

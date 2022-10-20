@@ -1,0 +1,694 @@
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* NAVEGADOR Y FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+}
+
+a:link,
+a:active,
+a:visited {
+    color: rgb(76, 76, 172);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: silver;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+nav {
+    color: black;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    word-spacing: 1vw;
+    font-size: clamp(15px, 1vw, 25px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    background-color: #0504017c;
+    padding: 10px 50px;
+    margin: 5px;
+}
+
+nav a:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 1.9s;
+}
+
+footer a:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 1.9s;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+/* NAVEGADOR Y FOOTER */
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+
+.video {
+    margin: 0px;
+}
+
+.titulo1 {
+    color: rgb(76, 76, 172);
+    padding: 10px;
+    font-size: clamp(15px, 1.5vw, 25px);
+}
+
+.articulo {
+    display: flex;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: clamp(12px, 1.5vw, 15px);
+}
+
+.cita {
+    color: rgb(119, 109, 109);
+    font-weight: bold;
+}
+
+h4 {
+    color: rgb(76, 76, 172);
+    font-weight: bold;
+    font-size: clamp(15px, 1.5vw, 25px);
+}
+
+dd {
+    padding: 0.2vw;
+    font-size: clamp(12px, 1vw, 15px);
+}
+
+.padre {
+    /* Lo defino como elemento flexible */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+}
+
+/* Hijos */
+.header,
+.articulo,
+.izquierda,
+.derecha,
+.footer {
+    flex-grow: 1;
+    /*Le asignamos un 1 para que abarque el 100% */
+    flex-basis: 100%;
+    /*Tamaño inicial que va a tener nuestro contenedor hijo, le damos el 100% para que en celular abarque el 100% */
+    padding: 5px;
+}
+
+.footer {
+    text-align: center;
+    color: rgb(76, 76, 172);
+    background-color: black;
+    /* padding: 10px; */
+    /* margin: 0px 20px; */
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.social {
+    word-spacing: 5vw;
+    font-size: clamp(16px, 2vw, 30px);
+}
+
+/* Estilizo imagen */
+.aside {
+    border-radius: 10vh;
+    /* box-shadow: 0 0 10px; */
+}
+
+.derecha {
+    padding: 50px 10px;
+}
+
+
+/* ----- Breakpoints ----- */
+
+/*Menor a 600 px - cambio condiciones en tamaños pequeños */
+@media all and (max-width: 600px) {
+    nav {
+        word-spacing: 2vw;
+        /* font-size:small; */
+        flex-direction: column;
+
+    }
+
+
+    .aside {
+        border-radius: 2vh;
+    }
+
+    .derecha {
+        padding: 10px 10px;
+    }
+
+    .articulo {
+        margin: 0px;
+    }
+
+}
+
+/* Lo que cambia cuando supera los 600px */
+@media all and (min-width: 600px) {
+
+    .articulo {
+        margin: 0px;
+    }
+
+    .aside {
+        flex: 1 1 auto;
+        /*los elementos izquierda y derecha se posicionan uno al lado del otro ocupando un ancho automático*/
+    }
+}
+
+/*Cuando tenga 1000 px o más...*/
+@media all and (min-width: 1000px) {
+
+
+    .articulo {
+        flex: 2 0;
+        /*articulo es 2 veces cada cuadrado izquierda o derecha*/
+    }
+
+    .izquierda {
+        order: 1;
+    }
+
+    .articulo {
+        order: 2;
+    }
+
+    .derecha {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+/*------------ Contacto ---------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #181818;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a3cc9;
+    padding: 16px;
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+
+.contactCompleto {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+    .contactCompleto {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.contactCompleto>* {
+    padding: 1rem;
+}
+
+.contactForm {
+    background: #222222;
+}
+
+.contactForm form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contactForm form div {
+    grid-column: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .contactForm form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contactForm div:nth-child(odd) {
+        grid-column: 1 / 2;
+    }
+
+    .contactForm div:nth-child(even) {
+        grid-column: 2 / 3;
+    }
+}
+
+.contactForm form .g-recaptcha{
+    grid-column: 1 / 2;
+    padding:0;
+}
+
+.contactForm form .full_width {
+    grid-column: 1 / 3;
+}
+
+.contactForm form div {
+    margin: 0;
+    padding: 1rem;
+}
+
+.contactForm form button,
+.contactForm form input,
+.contactForm form textarea {
+    width: 100%;
+    padding: .7rem .7rem .7rem 0;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #4a3cc9;
+    outline: 0;
+    color: #fff;
+    line-height: 24px;
+}
+
+.contactForm form button {
+    background: #4a3cc9;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.contactForm form button:hover,
+.contactForm form button:focus {
+    background: #3a2fa3;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+    outline: 0;
+    cursor: pointer;
+}
+
+.contactInfo {
+    background: #000;
+}
+
+.contactInfo h4,
+.contactInfo ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.contactInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contactInfo ul li {
+    padding: .3rem;
+
+}
+
+.contactInfo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contactInfo i {
+    padding-right: .6rem;
+}
+
+/* Pantallas grandes */
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 4rem;
+    }
+
+    .contactCompleto>* {
+        padding: 2rem;
+    }
+
+    .contactInfo h4,
+    .contactInfo ul,
+    .contactInfo div {
+        padding: .7rem;
+        text-align: left;
+    }
+}
+
+
+
+
+
+/* ------------- Portfolio------------- */
+.info {
+    padding: 5px 20px;
+    margin: 5px;
+    background-color: rgba(245, 245, 245, 0.267);
+
+    font-weight: bold;
+    font-size: 15px;
+    /* border-radius: 6%; */
+    border: none;
+
+}
+
+.info button :hover {
+    background-color: black;
+}
+
+
+
+/* button {
+        padding: 5px 20px;
+        background-color: whitesmoke;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 6%;
+    
+    }
+    
+    button:hover {
+        transition: 0.2s;
+        background-color: black;
+        cursor: pointer;
+        color: whitesmoke;
+    } */
+
+/* General */
+
+
+/* Galeria */
+#galeria {
+    background-color: rgb(76, 76, 172);
+    ;
+    display: flex;
+    flex-direction: row;
+}
+
+#galeria .Info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(76, 76, 172);
+}
+
+#galeria .Info .introduccion {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 600px;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+}
+
+#galeria .Info .introduccion img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#galeria .Info .introduccion p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw;
+}
+
+#galeria .Info .titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+
+}
+
+#galeria .Info .titulo .titulo2 span {
+    color: rgb(76, 76, 172);
+}
+
+#galeria .Info .video {
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+}
+
+#galeria .container {
+    margin-left: 30px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+    box-shadow: -10px 10px 10px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+}
+
+#galeria .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#galeria .galeriaelem {
+    position: relative;
+}
+
+#galeria .galeriaimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#galeria .galeriatitulo {
+    position: absolute;
+    bottom: 0;
+    color: whitesmoke;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 1));
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+#galeria .container .galeriaelem:nth-child(1) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+}
+
+#galeria .container .galeriaelem:nth-child(2) {
+    grid-column-start: span 2;
+    grid-row-start: span 1;
+}
+
+#galeria .container .galeriaelem:nth-child(3) {
+    grid-column-start: span 1;
+    grid-row-start: span 2;
+}
+
+#galeria .container .galeriaelem:nth-child(4) {
+    grid-column-end: span 2;
+}
+
+#galeria .container .galeriaelem:nth-child(5) {
+    grid-column-start: span 3;
+}
+
+#galeria .container .galeriaelem:nth-child(6) {
+    grid-row-start: span 3;
+}
+
+#galeria .container .galeriaelem:nth-child(7) {
+    grid-column-start: span 2;
+}
+
+#galeria .container .galeriaelem:nth-child(8) {
+    grid-row-start: span 2;
+}
+
+#galeria .container .galeriaelem:nth-child(9) {
+    grid-row-start: span 2;
+}
+
+/* Galeria */
+
+/* Cartas */
+
+#cartas {
+    background-color: rgb(20, 20, 20);
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+    text-align: center;
+}
+#cartas .titulo-cartas {
+    font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: rgb(76, 76, 172);
+}
+#cartas .titulo-cartas p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+    
+}
+#cartas .titulo-cartas p span{
+    color: rgb(76, 76, 172);
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+}
+#cartas .container {
+    padding: 20px;
+    background-color: rgb(76, 76, 172);
+    padding-top: 0px;
+}
+#cartas .container .container-cartas{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 0px;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.64);
+
+}
+#cartas .container .container-cartas .carta{
+    margin: 10;
+}
+#cartas h3 {
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.555);
+}
+#cartas .container .carta p {
+    display: none;
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.carta:first-child {
+    background-image: url(/img/Muestras/DALL·E-2022-08-19-07.42.31-_bro-cat-with-backwards-hat-and-headphones-and-safety-glasses_-_bro-cat-is-folding-laundry_-_background-is-a-woodworking-shop_-cinematic-lighting-.webp);
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 0 0 10px;
+
+}
+.carta:nth-child(2) {
+    background-image: url(/img/Muestras/images.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 0 0 10px;
+
+}
+.carta:last-child {
+    background-image: url(/img/Muestras/FQuCS4IVUAAVyRV.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 0 0 10px;
+
+}
+/* Cartas */
+
+/* Escritorio */
+
+@media (max-width: 640px){
+    #galeria{
+        display: flex;
+        flex-direction: column;
+    } 
+    #galeria .container{
+        margin-left: 20px;
+    }
+   #cartas .container .container-cartas .carta{
+    margin: 10px;
+   }
+   #cartas .container .container-cartas{
+    display: flex;
+    flex-direction: column;
+   } 
+}
+@media (max-width: 1007px){
+    #cartas .container .container-cartas{
+        display: flex; 
+    }
+    #cartas .container .container-cartas .carta{
+        margin: 10px;
+    }
+    #cartas .container .container-cartas .carta p{
+        display: none;
+    } 
+}
+
+@media (min-width: 1007px) {
+    #cartas .container .container-cartas{
+        display: flex;
+        flex-direction: row;
+    }
+    #cartas .container .container-cartas .carta p{
+        display: block;
+    }
+}
